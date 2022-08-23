@@ -1,0 +1,25 @@
+<div class="panel">
+    <div class="panel-heading">
+        Exercise - hyperscript Examples
+    </div>
+    <div class="panel-body">
+        <div class="section">
+            <button class="button">Toggle Red</button>
+            <button class="button">Click to Disable</button>
+            <div class="block mt-6">
+                <div class="subtitle">Active Search w/hyperscript</div>
+                <input class="input mb-4" placeholder="...search..." />
+                <table class="table is-fullwidth is-striped is-bordered">
+                    <tbody>
+                        {% for make in makes: %}
+                        <tr>
+                            <td>{{ make }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>

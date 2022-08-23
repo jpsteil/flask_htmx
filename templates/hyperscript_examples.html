@@ -1,0 +1,30 @@
+<div class="panel">
+    <div class="panel-heading">
+        hyperscript Examples
+    </div>
+    <div class="panel-body">
+        <div class="section">
+            <button class="button" _="on click toggle .has-background-danger .has-text-white">Toggle Red</button>
+            <button class="button" _="on click toggle @disabled then set my.innerText to 'No way to click Me'">Click to
+                Disable
+            </button>
+            <div class="block mt-6">
+                <div class="subtitle">Active Search w/hyperscript</div>
+                <input class="input mb-4" _="on input
+                            show <tbody>tr/> in next <table/>
+                                when it's textContent.toLowerCase() contains my value.toLowerCase()
+                        " placeholder="...search..." />
+                <table class="table is-fullwidth is-striped is-bordered">
+                    <tbody>
+                        {% for make in makes %}
+                        <tr>
+                            <td>{{ make }}</td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </div>
+</div>

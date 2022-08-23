@@ -1,0 +1,32 @@
+<div class="panel">
+    <div class="panel-heading">
+        This Site
+    </div>
+    <div class="panel-body">
+        <div class="section">
+            <div class="block">
+                This site was built as a Single Page Application
+                using <a href="https://flask.palletsprojects.com">Flask</a>, <a href="https://htmx.org">htmx</a>
+                and <a href="https://bulma.io">bulma</a>.
+            </div>
+
+            <div class="block">
+                <ul class="bullet-list">
+                    <li>app.py - the Flask application</li>
+                    <li>base.html - main template with links to resources (css, js, etc)</li>
+                    <li>index.html - index page with the menu frame - is a child of base.html and
+                        contains a div with id="active_page" where htmx swaps in all content.</li>
+                </ul>
+            </div>
+
+            <div class="block">
+                The data for the dropdowns and searches is built from a .csv file that is read when
+                the app starts up.  It is a simple dict() with the auto maker as the key pointing to
+                a list of models sold by that make.
+            </div>
+            <div class="block">
+                All code is available on <a href="https://github.com/jpsteil/flask_htmx" target="_blank">github</a>.
+            </div>
+        </div>
+    </div>
+</div>

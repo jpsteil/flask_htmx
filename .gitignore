@@ -1,0 +1,8 @@
+.idea
+*.pyc
+*.sqlite
+/data/*.txt
+\data\*.txt
+/dist/*
+/qlf.egg-info/*
+

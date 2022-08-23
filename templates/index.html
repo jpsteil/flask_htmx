@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="title"><a href="index">Seiden Group</a></div>
+<div class="subtitle">htmx Demo</div>
+<div class="columns">
+    <div class="column is-one-quarter">
+        <aside class="menu">
+            {% for section in menu %}
+            <p class="menu-label">
+                {{ section }}
+            </p>
+            <ul class="menu-list">
+                {% for menu_item in menu[section] %}
+                {% if menu_item|length == 2 %}
+                <li><a href="#" class="menu-item" hx-get="{{ menu_item[1] }}" hx-target="#active-page"
+                        hx-trigger="click" _="on click remove .active from .menu-item then add .active to me">{{ menu_item[0]
+                        }}</a></li>
+                {% elif menu_item|length == 3 %}
+                <li><a href="{{ menu_item[1] }}" target="_blank">{{ menu_item[0] }}&nbsp;<i
+                            class="far fa-window-restore"></i></a></li>
+                {% endif %}
+                {% endfor %}
+            </ul>
+            {% endfor %}
+        </aside>
+    </div>
+    <div class="column is-three-quarters" id="active-page">
+        <div class="section">
+            <div class="title is-1">Introduction to htmx</div>
+            <div class="subtitle">with Jim Steil</div>
+            <ol>
+                <li>Introductions</li>
+                <li>htmx Examples</li>
+                <li>htmx Exercises</li>
+                <li>hyperscript Examples</li>
+                <li>hyperscript Exercise</li>
+            </ol>
+        </div>
+    </div>
+</div>
+{% endblock %}

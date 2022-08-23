@@ -1,0 +1,21 @@
+<div class="panel">
+    <div class="panel-heading">
+        Exercise - Dependent Dropdown
+    </div>
+    <div class="panel-body">
+        <div class="section">
+            <div class="select">
+                <select name="make">
+                    {% for make in makes_models %}
+                    <option value="{{ make }}">{{ make }}</option>
+                    {% endfor %}
+                </select>
+            </div>
+            <div class="select">
+                <select name="model" id="models">
+
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
