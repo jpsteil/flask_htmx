@@ -15,17 +15,24 @@
                     <li>app.py - the Flask application</li>
                     <li>base.html - main template with links to resources (css, js, etc)</li>
                     <li>index.html - index page with the menu frame - is a child of base.html and
-                        contains a div with id="active_page" where htmx swaps in all content.</li>
+                        contains a div with id="active_page" where htmx swaps in all content.
+                    </li>
                 </ul>
             </div>
 
             <div class="block">
+                <div class="subtitle">Data</div>
                 The data for the dropdowns and searches is built from a .csv file that is read when
-                the app starts up.  It is a simple dict() with the auto maker as the key pointing to
+                the app starts up. It is a simple dict() with the auto maker as the key pointing to
                 a list of models sold by that make.
             </div>
             <div class="block">
-                All code is available on <a href="https://github.com/jpsteil/flask_htmx" target="_blank">github</a>.
+                <div class="subtitle">htmx/hyperscript Installation</div>
+                htmx and hyperscript are javascript libraries. For this application we are referencing
+                them in base.html using the CDN recommended in the <a href="https://htmx.org/docs/#installing">htmx docs</a>.
+            </div>
+            <div class="block">
+                All code for this application is available at <a href="https://github.com/jpsteil/flask_htmx" target="_blank">https://github.com/jpsteil/flask_htmx</a>.
             </div>
         </div>
     </div>

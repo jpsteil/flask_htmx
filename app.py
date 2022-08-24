@@ -1,3 +1,5 @@
+import time
+
 from flask import Flask, render_template, request
 from email_validator import validate_email
 import os
@@ -118,6 +120,8 @@ def get_search_results():
 
         if len(search_results) == 0:
             search_results.append("No matches found")
+
+    # time.sleep(2)
 
     return render_template("search_results.html", search_results=sorted(search_results))
 
